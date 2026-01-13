@@ -1,0 +1,29 @@
+python -u run.py `
+   --task_name long_term_forecast `
+   --is_training 1 `
+   --root_path ./dataset/m5/ `
+   --data_path CA_1.csv `
+   --ve_pt_path ./dataset/m5/CA_1_VE_STRUCT.pt `
+   --model_id CA1_28_7_AutoTimes_Llama_None_MLP_1 `
+   --model AutoTimes_Llama `
+   --data var_tokens `
+   --seq_len 28 `
+   --label_len 21 `
+   --token_len 7 `
+   --test_seq_len 28 `
+   --test_label_len 21 `
+   --test_pred_len 7 `
+   --batch_size 16 `
+   --learning_rate 0.0005 `
+   --mlp_hidden_layers 0 `
+   --train_epochs 10 `
+   --use_amp `
+   --gpu 0 `
+   --drop_last `
+   --num_workers 0 `
+   --ve_tau 1.0 `
+   --stride 1 `
+   --c_dim 7 `
+   --seg_size 7 `
+   --mask_prob 0.2 `
+   --lambda_rec 1e-3
